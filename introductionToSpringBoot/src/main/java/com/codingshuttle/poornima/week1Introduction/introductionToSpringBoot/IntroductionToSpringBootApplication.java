@@ -8,25 +8,32 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class IntroductionToSpringBootApplication implements CommandLineRunner {
 
-    @Autowired
-	Apple apt1;
+//    @Autowired
+//	Apple apt1;
+//
+//	@Autowired
+//	Apple apt2;
 
 	@Autowired
-	Apple apt2;
+	dbService db;
 
 	public static void main(String[] args) {
 
 		SpringApplication.run(IntroductionToSpringBootApplication.class, args);
 
+//		Apple apt = new Apple();
+//		apt.eatApple();
+
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		apt1.eatApple();
-		apt2.eatApple();
+//		apt1.eatApple();
+//		apt2.eatApple();
+//
+//		System.out.println(apt1.hashCode());
+//		System.out.println(apt2.hashCode());
 
-		System.out.println(apt1.hashCode());
-		System.out.println(apt2.hashCode());
-
+		System.out.println(db.getDbData());
 	}
 }
